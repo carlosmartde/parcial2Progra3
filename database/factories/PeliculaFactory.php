@@ -23,7 +23,7 @@ class PeliculaFactory extends Factory
     {
         return [
             'titulo' => $this->faker->sentence(3),
-            'genero' => $this->faker->word(),
+            'genero' => $this->faker->randomElement(['Terror', 'Acción', 'Infantiles', 'Comedia', 'Drama', 'Ciencia Ficción', 'Romance']),
             'puntuacion' => $this->faker->randomFloat(1, 0, 10),
             'actor_principal' => $this->faker->name(),
             'actor_secundario' => $this->faker->name(),
